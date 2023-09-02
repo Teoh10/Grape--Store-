@@ -1,8 +1,7 @@
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { useWalletTokenBalance } from '@lndgalante/solutils';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
-import { WalletMultiButton, WalletDisconnectButton } from '@solana/wallet-adapter-react-ui';
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import dynamic from 'next/dynamic'
 import Button from '@/components/Button'
 
