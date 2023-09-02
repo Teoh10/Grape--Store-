@@ -36,13 +36,15 @@ function Home() {
 
       <div className="relative flex flex-col justify-between place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
         <h1 className='font-bold'>This is a boilerplate for the APUBCC Sparkathon 2023</h1>
-        <div className='place-items-center grid mt-10'>
+          {/* if publicKey found, display button */}
+          {publicKey ? <div className='place-items-center grid mt-10'>
           <Button onClick={handleWalletBalanceRequest}>Request Wallet Balance</Button>
           {status === 'iddle' ? <p>Haven&apos;t requested any SOL balance yet</p> : null}
           {status === 'loading' ? <p>Requesting your SOL balance tokens</p> : null}
           {status === 'success' ? <p>We successfully got your balance: {result} SOL</p> : null}
           {status === 'error' ? <p>{error}</p> : null}
-        </div>
+        </div> : null}
+        
       </div>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
