@@ -1,4 +1,4 @@
-import '@/styles/globals.css'
+import '../styles/globals.css'
 import React from 'react';
 import { WalletConnectProvider } from '@/components/WalletConnectProvider';
 import '@solana/wallet-adapter-react-ui/styles.css'
